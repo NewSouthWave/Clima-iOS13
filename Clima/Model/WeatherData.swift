@@ -8,16 +8,16 @@
 
 import Foundation
 
-struct WeatherData: Decodable {
+struct WeatherData: Codable {   //  Codable 프로토콜은 Decodable과 Encodable를 내포함
     let name: String
     let main: Main
     let weather: [Weather]
 }
 
-struct Main: Decodable {
+struct Main: Codable {
     let temp: Double
 }
 
-struct Weather: Decodable {
-    let description: String
+struct Weather: Codable {
+    let id: Int
 }
